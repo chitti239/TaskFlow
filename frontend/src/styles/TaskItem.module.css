@@ -1,0 +1,31 @@
+.item {
+  display: flex; align-items: flex-start; gap: 8px;
+  background: rgba(255,255,255,0.75); border: 1px solid rgba(0,0,0,0.07);
+  border-radius: var(--radius-sm); padding: 8px 10px; margin-bottom: 6px;
+  transition: opacity 0.15s;
+}
+body.dark .item { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.08); }
+.item:last-child { margin-bottom: 0; }
+
+.check { width: 15px; height: 15px; border-radius: 3px; cursor: pointer; flex-shrink: 0; margin-top: 3px; accent-color: var(--text); }
+
+.body { flex: 1; min-width: 0; cursor: pointer; }
+.body:hover .name { text-decoration: underline; color: #3570d4; }
+
+.name { display: block; font-size: 13px; color: var(--text); line-height: 1.4; word-break: break-word; transition: color 0.15s; }
+
+.meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; align-items: center; }
+.due { font-size: 11px; color: var(--text-muted); }
+.overdueDue { color: #d95a2e; font-weight: 500; }
+.tag { font-size: 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; color: var(--text-muted); }
+.subtaskPill { font-size: 10px; background: #e8f0fe; color: #3570d4; border-radius: 4px; padding: 1px 6px; }
+body.dark .subtaskPill { background: #1a2a4a; color: #6090d0; }
+
+.subBar { height: 3px; background: var(--border); border-radius: 2px; margin-top: 5px; overflow: hidden; }
+.subBarFill { height: 100%; background: #3570d4; border-radius: 2px; }
+
+.done .name { text-decoration: line-through; opacity: 0.45; }
+
+.del { font-size: 16px; color: var(--text-muted); background: none; border: none; padding: 0; line-height: 1; opacity: 0; transition: opacity 0.12s; flex-shrink: 0; }
+.item:hover .del { opacity: 1; }
+.del:hover { color: var(--text); }

@@ -1,0 +1,45 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #eceae6;
+  --surface: #ffffff;
+  --border: #e4e2dc;
+  --border-soft: #eeece8;
+  --text: #1a1916;
+  --text-muted: #7a7872;
+  --text-faint: #b0aea8;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --urgent-bg: #fff5f0; --urgent-border: #f0c4b0; --urgent-dot: #d95a2e;
+  --schedule-bg: #f0f5ff; --schedule-border: #c0d2f0; --schedule-dot: #3570d4;
+  --quick-bg: #fffbf0; --quick-border: #f0e0b0; --quick-dot: #b87a14;
+  --later-bg: #f4f4f2; --later-border: #dddcda; --later-dot: #888680;
+}
+
+body.dark {
+  --bg: #141412;
+  --surface: #1e1d1b;
+  --border: #2e2c28;
+  --border-soft: #252420;
+  --text: #f0ede8;
+  --text-muted: #8a8880;
+  --text-faint: #555250;
+  --urgent-bg: #2a1a14; --urgent-border: #5a2e1e; --urgent-dot: #e07050;
+  --schedule-bg: #141e2e; --schedule-border: #1e3a6e; --schedule-dot: #5090e0;
+  --quick-bg: #201c10; --quick-border: #504010; --quick-dot: #d09030;
+  --later-bg: #1a1918; --later-border: #303030; --later-dot: #686660;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.5;
+  transition: background 0.2s, color 0.2s;
+}
+
+input, button, select, textarea { font-family: 'DM Sans', sans-serif; }
+button { cursor: pointer; }

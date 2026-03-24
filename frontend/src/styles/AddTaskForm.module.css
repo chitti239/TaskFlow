@@ -1,0 +1,20 @@
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 1rem; box-shadow: var(--shadow); }
+
+.mainRow { display: flex; gap: 8px; align-items: center; }
+.textInput { flex: 1; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 9px 12px; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.15s; }
+.textInput:focus { border-color: var(--text); background: var(--surface); }
+.expandBtn { background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 9px 12px; font-size: 12px; color: var(--text-muted); white-space: nowrap; transition: all 0.15s; }
+.expandBtn:hover { border-color: var(--text); color: var(--text); }
+.addBtn { background: var(--text); color: var(--bg); border: none; border-radius: var(--radius-sm); padding: 9px 18px; font-size: 13px; font-weight: 500; white-space: nowrap; transition: opacity 0.15s; }
+.addBtn:hover { opacity: 0.82; }
+
+.extraRow { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; align-items: center; }
+.smallInput { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 10px; font-size: 13px; background: var(--bg); color: var(--text); outline: none; flex: 1; min-width: 120px; transition: border-color 0.15s; }
+.smallInput:focus { border-color: var(--text); }
+
+.impToggle { display: flex; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; background: var(--bg); }
+.impToggle input[type="radio"] { display: none; }
+.impToggle label { padding: 8px 12px; font-size: 12px; font-weight: 500; cursor: pointer; color: var(--text-muted); transition: all 0.12s; white-space: nowrap; user-select: none; }
+.impToggle input:checked + label { background: var(--text); color: var(--bg); }
+
+.error { font-size: 12px; color: #d95a2e; margin-top: 8px; }

@@ -1,0 +1,91 @@
+.app { min-height: 100vh; }
+
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { font-family: 'DM Serif Display', serif; font-size: 20px; letter-spacing: -0.3px; }
+.topRight { display: flex; align-items: center; gap: 10px; }
+.streak { font-size: 13px; font-weight: 500; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 4px 10px; }
+.darkBtn { background: none; border: none; font-size: 16px; padding: 4px; line-height: 1; }
+.userPill { font-size: 12px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; }
+.logoutBtn { font-size: 12px; color: var(--text-muted); background: none; border: none; transition: color 0.15s; }
+.logoutBtn:hover { color: var(--text); }
+
+.main { padding: 2rem 1.5rem; max-width: 900px; margin: 0 auto; }
+
+.overdueBanner {
+  background: #fff0ee;
+  border: 1px solid #f5c0b8;
+  color: #c0392b;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 13px;
+  margin-bottom: 1.25rem;
+}
+body.dark .overdueBanner { background: #2a1410; border-color: #5a2010; color: #e07060; }
+
+.greeting { font-family: 'DM Serif Display', serif; font-size: 24px; letter-spacing: -0.3px; margin-bottom: 4px; }
+.quote { font-size: 13px; color: var(--text-muted); font-style: italic; font-weight: 300; margin-bottom: 1.5rem; }
+
+.searchRow { position: relative; margin-bottom: 1rem; }
+.searchInput {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px 36px 9px 12px;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.searchInput:focus { border-color: var(--text); }
+.clearSearch { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 18px; color: var(--text-muted); line-height: 1; }
+.clearSearch:hover { color: var(--text); }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 1rem; }
+.tab { background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 14px; font-size: 13px; color: var(--text-muted); transition: all 0.15s; display: flex; align-items: center; gap: 6px; }
+.tab:hover { border-color: var(--text); color: var(--text); }
+.activeTab { background: var(--text); color: var(--bg); border-color: var(--text); }
+.tabBadge { background: #d95a2e; color: white; border-radius: 10px; padding: 1px 6px; font-size: 11px; font-weight: 500; }
+.activeTab .tabBadge { background: rgba(255,255,255,0.3); }
+
+.matrix { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; margin-top: 1rem; }
+@media (max-width: 540px) { .matrix { grid-template-columns: 1fr; } }
+
+.subjectSection { margin-top: 2rem; }
+.sectionTitle { font-family: 'DM Serif Display', serif; font-size: 18px; margin-bottom: 0.75rem; }
+.subjectList { display: flex; gap: 10px; flex-wrap: wrap; }
+.subjectCard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; min-width: 160px; flex: 1; }
+.subjectName { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
+.subjectCount { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.subjectBar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.subjectBarFill { height: 100%; background: #3570d4; border-radius: 2px; transition: width 0.3s; }
+
+.emptyMsg { text-align: center; color: var(--text-muted); font-size: 14px; padding: 3rem 0; }
+.loadingMsg { font-size: 13px; color: var(--text-muted); text-align: center; padding: 3rem 0; }
+.errorMsg { font-size: 13px; color: #d95a2e; margin-bottom: 1rem; }
+.legend { margin-top: 1.25rem; font-size: 12px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; line-height: 1.8; }
+.legend strong { font-weight: 500; color: var(--text); }
+
+/* Confetti */
+.confettiWrap { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; overflow: hidden; }
+.confettiPiece {
+  position: absolute;
+  top: -10px;
+  border-radius: 2px;
+  animation: confettiFall 2.5s ease-in forwards;
+}
+@keyframes confettiFall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
