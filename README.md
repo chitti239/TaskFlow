@@ -109,15 +109,10 @@ JWT_SECRET=your_jwt_secret
 - 12 accent colour themes (Charcoal, Ocean, Forest, Sunset, Rose, Purple, Teal, Amber, Indigo, Crimson, Slate, Mint)
 - Change email and password
 
-### Study Buddy (floating widget)
-- AI chat companion available on every page
-- Quick-start prompts: quiz me, explain a concept, study tips, motivation
-- Maintains conversation context within the session
 
 ### Other
 - **Keyboard shortcuts** — global shortcut panel for quick navigation
 - **Notification bell** — in-app reminders and updates
-- **Exam countdown** — upcoming exams shown on the dashboard with days remaining
 - **Study streak** — complete at least one task per day to keep your streak going
 
 ---

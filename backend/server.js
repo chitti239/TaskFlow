@@ -9,7 +9,6 @@ app.use(express.json());
 
 app.use('/api/auth',      require('./routes/auth'));
 app.use('/api/tasks',     require('./routes/tasks'));
-app.use('/api/exams',     require('./routes/exams'));
 app.use('/api/pomodoro',  require('./routes/pomodoro'));
 app.use('/api/templates', require('./routes/templates'));
 app.use('/api/profile',   require('./routes/profile'));
