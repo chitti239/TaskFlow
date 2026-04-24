@@ -23,7 +23,6 @@ A full-stack student productivity app built with the MERN stack. Manage tasks, t
 ```bash
 cd backend
 npm install
-# Add your MongoDB URI and JWT secret to .env
 npm run dev
 ```
 
