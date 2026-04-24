@@ -1,0 +1,14 @@
+.wrap { position:relative; }
+.bell { position:relative;background:none;border:none;font-size:19px;padding:5px;line-height:1;border-radius:50%;transition:background 0.12s; }
+.bell:hover { background:var(--bg); }
+.badge { position:absolute;top:0;right:0;background:#ef4444;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9.5px;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface); }
+.dropdown { position:absolute;right:0;top:calc(100%+8px);width:290px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-md);overflow:hidden;z-index:200; }
+.dropHeader { font-size:11px;font-weight:600;color:var(--text-muted);padding:10px 14px;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.07em; }
+.empty { padding:1.25rem;font-size:13px;color:var(--text-muted);text-align:center; }
+.notif { width:100%;display:flex;align-items:center;gap:10px;padding:10px 14px;background:none;border:none;border-bottom:1px solid var(--border-soft);text-align:left;transition:background 0.12s; }
+.notif:hover { background:var(--bg); }
+.notif:last-child { border-bottom:none; }
+.notifIcon { font-size:16px;flex-shrink:0; }
+.notifMsg { font-size:13px;color:var(--text);line-height:1.4; }
+.overdue .notifMsg { color:#dc2626; }
+.today .notifMsg { color:var(--text); }

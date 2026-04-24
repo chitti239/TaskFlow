@@ -1,0 +1,253 @@
+.header { margin-bottom: 2rem; }
+
+.title { font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+
+/* ── Game Card ─────────────────────────── */
+.gameCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.gameTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.gameSub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: -0.4rem;
+}
+
+/* ── Shared Buttons ─────────────────────── */
+.startBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.startBtn:hover { opacity: 0.85; }
+
+.linkBtn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.25rem 0.5rem;
+}
+.linkBtn:hover { opacity: 0.7; }
+
+/* ── Reaction ────────────────────────────── */
+.reactionBox {
+  height: 180px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid var(--border);
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.reactionMsg {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none;
+}
+
+.reactionResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.reactionEmoji { font-size: 2rem; }
+.reactionMs { font-size: 2rem; font-weight: 700; color: var(--text); }
+.reactionLabel { font-size: 0.9rem; color: var(--text-muted); }
+.reactionBest { font-size: 0.78rem; color: var(--text-faint); }
+
+.earlyMsg {
+  font-size: 0.85rem;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ── Memory ─────────────────────────────── */
+.memorySetup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.diffRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.diffBtn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+.diffBtn:hover { border-color: var(--accent); color: var(--accent); }
+.diffActive {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.memoryStats {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.memoryGrid {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.memCard {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  background: var(--surface-2);
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.18s, border-color 0.15s;
+  overflow: hidden;
+}
+.memCard:hover { transform: scale(1.05); border-color: var(--accent); }
+
+.memFront, .memBack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.18s;
+}
+.memFront { opacity: 1; color: var(--text-faint); font-size: 1rem; }
+.memBack  { opacity: 0; }
+
+.memCardFlipped .memFront { opacity: 0; }
+.memCardFlipped .memBack  { opacity: 1; }
+
+.memCardMatched {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  opacity: 0.75;
+}
+
+.wonBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+.wonEmoji { font-size: 2.5rem; }
+.wonText  { font-size: 1rem; color: var(--text-muted); }
+.wonRating { font-size: 1rem; font-weight: 600; }
+
+/* ── Word Scramble ──────────────────────── */
+.scrambleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.scrambledWord {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  font-family: 'Fraunces', serif;
+}
+
+.hint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  background: var(--surface-2);
+  border-radius: var(--radius-xs);
+  padding: 0.4rem 0.6rem;
+}
+
+.scrambleInput {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.8rem;
+  font-size: 1rem;
+  background: var(--surface-2);
+  color: var(--text);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.scrambleInput:focus { border-color: var(--accent); }
+
+.scrambleBtns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scrambleCorrect {
+  color: #22c55e;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.scrambleWrong {
+  color: #ef4444;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}

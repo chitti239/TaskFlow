@@ -1,0 +1,52 @@
+.overdueBanner { background:#fef2f2;border:1px solid #fecaca;color:#dc2626;border-radius:var(--radius);padding:10px 16px;font-size:13px;margin-bottom:1.5rem;line-height:1.5;display:flex;align-items:center;gap:8px; }
+body.dark .overdueBanner { background:#1c0a0a;border-color:#7f1d1d;color:#fca5a5; }
+.greeting { font-family:'Fraunces',serif;font-size:26px;font-weight:500;letter-spacing:-0.4px;margin-bottom:4px; }
+.quote { font-size:13px;color:var(--text-muted);font-style:italic;margin-bottom:1.75rem;line-height:1.6; }
+.matrix { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:1.25rem; }
+.empty { text-align:center;color:var(--text-muted);font-size:14px;padding:3rem 0;line-height:1.8; }
+.legend { margin-top:1.5rem;font-size:12px;color:var(--text-faint);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;line-height:1.8; }
+.legend strong { font-weight:600;color:var(--text-muted); }
+
+/* Greeting row with ring */
+.greetingRow { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.75rem; }
+.ringWidget { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; position: relative; }
+.ringCenter { position: absolute; top: 0; left: 0; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; }
+.ringPct { font-size: 16px; font-weight: 700; letter-spacing: -0.5px; }
+.ringLabel { font-size: 11px; color: var(--text-faint); font-weight: 500; }
+
+/* Focus CTA */
+.focusCTA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--surface) 100%);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 1.25rem;
+  gap: 12px;
+}
+body.dark .focusCTA { background: linear-gradient(135deg, #1a1a20 0%, var(--surface) 100%); }
+
+.focusCTALeft { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.focusCTAIcon { font-size: 20px; flex-shrink: 0; }
+.focusCTATitle { font-size: 11px; font-weight: 600; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+.focusCTATask { font-size: 13.5px; font-weight: 500; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.focusCTABtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.15s, transform 0.1s;
+  flex-shrink: 0;
+}
+.focusCTABtn:hover { opacity: 0.88; transform: scale(1.02); }
+
+/* Exam cards */
+.examCards { display: flex; gap: 10px; margin-bottom: 1.25rem; overflow-x: auto; }

@@ -1,0 +1,12 @@
+.title { font-family:'DM Serif Display',serif;font-size:24px;letter-spacing:-0.3px;margin-bottom:4px; }
+.sub { font-size:13px;color:var(--text-muted);margin-bottom:0.75rem; }
+.progressBar { height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:2rem; }
+.progressFill { height:100%;background:var(--accent);border-radius:3px;transition:width 0.4s; }
+.sectionTitle { font-size:15px;font-weight:500;color:var(--text);margin-bottom:1rem;margin-top:1.5rem; }
+.grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px; }
+.badge { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center;transition:border-color 0.15s; }
+.badge:not(.badgeLocked):hover { border-color:var(--accent); }
+.badgeLocked { opacity:0.45; }
+.badgeIcon { font-size:32px;margin-bottom:8px; }
+.badgeName { font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px; }
+.badgeDesc { font-size:11px;color:var(--text-muted);line-height:1.4; }

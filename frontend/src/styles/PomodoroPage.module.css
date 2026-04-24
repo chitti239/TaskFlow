@@ -1,0 +1,77 @@
+.title { font-family:'Fraunces',serif;font-size:26px;font-weight:500;letter-spacing:-0.4px;margin-bottom:4px; }
+.sub { font-size:13px;color:var(--text-muted);margin-bottom:2rem;line-height:1.6; }
+.layout { display:grid;grid-template-columns:300px 1fr;gap:1.5rem;align-items:start; }
+.timerCard { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;text-align:center;box-shadow:var(--shadow); }
+.modeLabel { font-size:13px;color:var(--text-muted);margin-bottom:1.5rem;font-weight:500; }
+.ring { position:relative;width:160px;height:160px;margin:0 auto 1.5rem; }
+.svg { width:100%;height:100%; }
+.timerText { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:38px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums; }
+.controls { display:flex;gap:8px;justify-content:center;margin-bottom:1.25rem; }
+.mainBtn { background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);padding:10px 28px;font-size:14px;font-weight:600;transition:opacity 0.15s; }
+.mainBtn:hover { opacity:0.85; }
+.smBtn { background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 16px;font-size:13px;color:var(--text-muted);transition:all 0.15s; }
+.smBtn:hover { border-color:var(--text-faint);color:var(--text); }
+.sessionInfo { display:flex;justify-content:center;gap:1.5rem;font-size:13px;color:var(--text-muted); }
+.sessionInfo strong { color:var(--text);font-weight:600; }
+.heatmapCard { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;box-shadow:var(--shadow); }
+.heatmapTitle { font-size:15px;font-weight:600;color:var(--text);margin-bottom:1rem; }
+.heatmap { overflow-x:auto; }
+.heatmapGrid { display:grid;gap:3px;width:fit-content; }
+.cell { width:13px;height:13px;border-radius:2px;transition:transform 0.1s; }
+.cell:hover { transform:scale(1.4); }
+.heatmapLegend { display:flex;align-items:center;gap:4px;margin-top:10px;font-size:11px;color:var(--text-faint); }
+.heatmapSub { font-size:12px;color:var(--text-faint);margin-top:0.875rem; }
+
+/* right column layout */
+.rightCol { display: flex; flex-direction: column; gap: 1.5rem; }
+.layout   { grid-template-columns: 300px 1fr; }
+
+/* Ambient Player */
+.vibeCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.vibeTitle { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+.vibeSub   { font-size: 12px; color: var(--text-muted); margin-bottom: 1rem; }
+
+.vibeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.vibeBtn {
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: all 0.15s;
+  text-align: center;
+}
+.vibeBtn:hover { border-color: var(--accent); }
+.vibeBtnActive { font-weight: 600; }
+
+.vibeLabel { font-size: 0.85rem; }
+.vibeDesc  { font-size: 0.7rem; color: var(--text-faint); }
+.vibeOn    { font-size: 0.68rem; color: #22c55e; font-weight: 600; margin-top: 2px; }
+
+.volRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.volIcon  { font-size: 1.1rem; }
+.volSlider {
+  flex: 1;
+  accent-color: var(--accent);
+  cursor: pointer;
+}

@@ -1,0 +1,94 @@
+.topbar {
+  height: var(--topbar-h);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.left { flex-shrink: 0; display: none; }
+.logo { font-family:'Fraunces',serif; font-size:18px; font-weight:500; letter-spacing:-0.3px; color:var(--text); }
+
+.center { flex: 1; max-width: 520px; }
+.searchWrap { position: relative; display: flex; align-items: center; }
+.searchIcon { position: absolute; left: 11px; font-size: 13px; pointer-events: none; opacity: 0.5; }
+.searchInput {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 7px 34px 7px 34px;
+  font-size: 13px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.searchInput:focus {
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+.clearBtn { position:absolute; right:10px; background:none; border:none; font-size:16px; color:var(--text-faint); line-height:1; }
+.clearBtn:hover { color: var(--text); }
+
+.right { flex-shrink: 0; display: flex; align-items: center; gap: 10px; margin-left: auto; }
+
+.streak {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 5px 12px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.avatarBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 4px 12px 4px 4px;
+  border-radius: 24px;
+  transition: all 0.15s;
+}
+.avatarBtn:hover { background: var(--bg); border-color: var(--text-faint); }
+.username { font-size: 13px; font-weight: 500; color: var(--text); }
+
+.focusBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.focusBtn:hover { opacity: 0.88; transform: scale(1.02); }
+.focusBtnLabel { display: inline; }
+
+.shortcutBtn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+.shortcutBtn:hover { background: var(--surface); color: var(--text); border-color: var(--text-faint); }

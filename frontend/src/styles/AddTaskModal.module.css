@@ -1,0 +1,29 @@
+.overlay { position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:300;padding:1rem;backdrop-filter:blur(3px); }
+.modal { background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);width:100%;max-width:540px;max-height:90vh;overflow-y:auto;box-shadow:var(--shadow-md); }
+.modalHeader { display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem 0; }
+.modalHeader h3 { font-family:'Fraunces',serif;font-size:20px;font-weight:500;color:var(--text); }
+.closeBtn { background:none;border:none;font-size:22px;color:var(--text-muted);line-height:1;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background 0.12s; }
+.closeBtn:hover { background:var(--bg); }
+.templateBanner { margin:0.75rem 1.5rem 0;background:var(--accent-light);color:var(--accent);border-radius:var(--radius-sm);padding:8px 12px;font-size:12.5px;font-weight:500; }
+form { padding:1.25rem 1.5rem 1.5rem;display:flex;flex-direction:column;gap:0.875rem; }
+.row { display:grid;grid-template-columns:1fr 1fr;gap:0.875rem; }
+.field { display:flex;flex-direction:column;gap:5px; }
+.field label { font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;justify-content:space-between; }
+.field input,.field textarea,.field select { border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 11px;font-size:13px;background:var(--bg);color:var(--text);outline:none;resize:vertical;transition:border-color 0.15s,box-shadow 0.15s; }
+.field input:focus,.field textarea:focus,.field select:focus { border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-light); }
+.charCount,.hint { font-size:10px;color:var(--text-faint);font-weight:400;text-transform:none;letter-spacing:0; }
+.subtaskPreview { background:var(--bg);border-radius:var(--radius-sm);padding:8px 12px;border:1px solid var(--border); }
+.subtaskRow { display:flex;align-items:center;gap:8px;padding:3px 0;font-size:13px;color:var(--text-muted); }
+.subtaskBullet { color:var(--accent);font-weight:700; }
+.impToggle { display:flex;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:var(--bg); }
+.impToggle input[type="radio"] { display:none; }
+.impToggle label { flex:1;text-align:center;padding:8px;font-size:13px;cursor:pointer;color:var(--text-muted);transition:all 0.12s;text-transform:none;letter-spacing:0;font-weight:400; }
+.impToggle input:checked+label { background:var(--accent);color:#fff;font-weight:500; }
+.error { font-size:12px;color:#ef4444; }
+.actions { display:flex;gap:8px;justify-content:flex-end;margin-top:0.25rem; }
+.cancelBtn { background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:9px 18px;font-size:13px;color:var(--text-muted);transition:all 0.15s; }
+.cancelBtn:hover { border-color:var(--text);color:var(--text); }
+.addBtn { background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);padding:9px 22px;font-size:13px;font-weight:600;transition:opacity 0.15s,transform 0.1s; }
+.addBtn:hover:not(:disabled) { opacity:0.85; }
+.addBtn:active:not(:disabled) { transform:scale(0.98); }
+.addBtn:disabled { opacity:0.4;cursor:not-allowed; }

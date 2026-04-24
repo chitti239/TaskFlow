@@ -1,0 +1,15 @@
+.title { font-family:'DM Serif Display',serif;font-size:24px;letter-spacing:-0.3px;margin-bottom:4px; }
+.sub { font-size:13px;color:var(--text-muted);margin-bottom:2rem; }
+.empty { text-align:center;color:var(--text-muted);font-size:14px;padding:3rem 0;line-height:1.8; }
+.subjectBlock { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;margin-bottom:1rem; }
+.subjectHeader { display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px; }
+.subjectName { font-size:15px;font-weight:500;color:var(--text); }
+.subjectStats { display:flex;gap:6px; }
+.statPill { font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px; }
+.avgBar { height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:12px; }
+.avgFill { height:100%;border-radius:3px;transition:width 0.4s; }
+.taskList { display:flex;flex-direction:column;gap:4px; }
+.gradeRow { display:flex;align-items:center;justify-content:space-between;padding:6px 8px;border-radius:var(--radius-sm);cursor:pointer;transition:background 0.12s; }
+.gradeRow:hover { background:var(--bg); }
+.gradeTask { font-size:13px;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+.gradeScore { font-size:13px;font-weight:500;flex-shrink:0;margin-left:12px; }

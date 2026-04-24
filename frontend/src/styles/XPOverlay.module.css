@@ -1,0 +1,163 @@
+/* XP Popup floaters */
+.popupContainer {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.xpPopup {
+  background: #1a1916;
+  color: #fbbf24;
+  border: 1px solid #fbbf2440;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  animation: xpFloat 2s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+body.dark .xpPopup { background: #fbbf24; color: #1a1916; }
+
+.popupReason {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+@keyframes xpFloat {
+  0%   { transform: translateY(0);   opacity: 0; }
+  15%  { transform: translateY(-4px); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(-28px); opacity: 0; }
+}
+
+/* Level Up Modal */
+.levelUpOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+  cursor: pointer;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.levelUpCard {
+  background: #0f0f11;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 48px 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+  max-width: 360px;
+  width: 90%;
+}
+@keyframes popIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.levelUpStars {
+  font-size: 22px;
+  letter-spacing: 8px;
+  opacity: 0.6;
+  margin-bottom: 16px;
+  animation: pulse 1.5s ease infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+.levelUpLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+
+.levelUpNum {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-family: 'Fraunces', serif;
+}
+
+.levelUpTitle {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.levelUpSub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+}
+
+.levelUpRays {
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(from 0deg, transparent 0%, rgba(255,255,255,0.03) 10%, transparent 20%);
+  animation: spin 8s linear infinite;
+  pointer-events: none;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* XP Bar in sidebar/topbar */
+.xpBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.xpBarLeft { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+
+.xpLevel {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.xpTitle { font-size: 11px; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+
+.xpBarTrack {
+  flex: 1;
+  height: 5px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 50px;
+}
+
+.xpBarFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s cubic-bezier(0.34,1.2,0.64,1);
+}
+
+.xpBarRight { flex-shrink: 0; }
+.xpNum { font-size: 11px; font-weight: 600; color: var(--text); white-space: nowrap; }
+.xpOf  { font-weight: 400; color: var(--text-faint); }

@@ -1,0 +1,20 @@
+.screen { min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--bg); }
+.card { background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2.5rem;width:100%;max-width:390px;box-shadow:var(--shadow-md); }
+.logo { font-family:'Fraunces',serif;font-size:30px;font-weight:500;letter-spacing:-0.5px;margin-bottom:4px;color:var(--text); }
+.sub { font-size:13px;color:var(--text-muted);font-weight:300;margin-bottom:2rem;line-height:1.5; }
+.tabRow { display:flex;border:1px solid var(--border);border-radius:var(--radius-sm);padding:3px;margin-bottom:1.5rem;background:var(--bg); }
+.tab { flex:1;border:none;background:none;padding:8px;border-radius:var(--radius-xs);font-size:13px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all 0.15s;text-decoration:none;text-align:center;display:block; }
+.active { background:var(--surface);color:var(--text);box-shadow:var(--shadow); }
+.field { margin-bottom:1rem; }
+.field label { display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px; }
+.field input { width:100%;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-size:14px;background:var(--bg);color:var(--text);outline:none;transition:border-color 0.15s,box-shadow 0.15s; }
+.field input:focus { border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 3px var(--accent-light); }
+.hint { font-size:10px;color:var(--text-faint);font-weight:400;text-transform:none;letter-spacing:0; }
+.error { font-size:12px;color:#ef4444;margin-bottom:0.75rem; }
+.submitBtn { width:100%;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);padding:11px;font-size:14px;font-weight:600;transition:opacity 0.15s,transform 0.1s;margin-top:0.25rem;letter-spacing:0.01em; }
+.submitBtn:hover:not(:disabled) { opacity:0.85; }
+.submitBtn:active:not(:disabled) { transform:scale(0.99); }
+.submitBtn:disabled { opacity:0.5;cursor:not-allowed; }
+.switchText { margin-top:1.25rem;font-size:13px;color:var(--text-muted);text-align:center; }
+.switchText a { color:var(--accent);font-weight:600;text-decoration:none; }
+.switchText a:hover { text-decoration:underline; }

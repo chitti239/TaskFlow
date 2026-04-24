@@ -1,0 +1,7 @@
+.wrap { margin-bottom:1.5rem; }
+.row { display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap; }
+.card { flex:1;min-width:80px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;box-shadow:var(--shadow); }
+.label { font-size:10.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;font-weight:600; }
+.value { font-size:24px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums; }
+.progressBar { height:3px;background:var(--border);border-radius:2px;overflow:hidden; }
+.progressFill { height:100%;background:var(--accent);border-radius:2px;transition:width 0.5s cubic-bezier(0.4,0,0.2,1); }
